@@ -4,15 +4,16 @@
     <div class="form-group">
       <label>Name</label>
       <input type="text" formControlName="name" class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" placeholder="Иван Иванов"/>
       <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-        <div *ngIf="f.name.errors.required">First Name is required</div>
+        <div *ngIf="f.name.errors.required">Name is required</div>
+        <div *ngIf="f.name.errors.pattern">Name must match the following pattern: "Имя Фамилия"</div>
       </div>
     </div>
     <div class="form-group">
       <label>Email</label>
       <input type="text" formControlName="email" class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="user@domain" />
       <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
         <div *ngIf="f.email.errors.required">Email is required</div>
         <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
@@ -29,7 +30,7 @@
     <div class="form-group">
       <label>Password</label>
       <input type="password" formControlName="password" class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="password" />
       <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
         <div *ngIf="f.password.errors.required">Password is required</div>
         <div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>

@@ -1,0 +1,14 @@
+<h3>Войти</h3>
+<div>
+  <div class="spacer">
+    <label for="Email">Логин</label>
+    <input type="text" [(ngModel)]="email">
+  </div>
+  <div class="spacer">
+    <label for="password">Пароль</label>
+    <input type="password" [(ngModel)]="password" class="form-control" />
+  </div>
+  <div class="spacer">
+    <button type="submit" (click)="Login()">Войти</button>
+  </div>
+</div>

@@ -8,12 +8,14 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PhoneMaskDirective } from './registration/phone-mask.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
+    PhoneMaskDirective,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'login', component: LoginComponent },
       { path: 'registration', component: RegistrationComponent }
      ]),
+  ],
+  exports: [
+    PhoneMaskDirective,
   ],
   providers: [],
   bootstrap: [AppComponent]

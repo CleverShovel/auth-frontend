@@ -14,7 +14,9 @@ export class RegistrationComponent implements OnInit {
 
   constructor() { }
 
-  
+  Login(): void {
+
+  }
 
   ngOnInit(): void {
   }

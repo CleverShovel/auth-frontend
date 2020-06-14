@@ -1,12 +1,12 @@
 <h3>Войти</h3>
 <div>
   <div class="spacer">
-    <label for="Email">Логин</label>
-    <input type="text" [(ngModel)]="email">
+    <label for="Email">Почта</label>
+    <input type="text" [(ngModel)]="email" placeholder="user@domain">
   </div>
   <div class="spacer">
     <label for="password">Пароль</label>
-    <input type="password" [(ngModel)]="password" class="form-control" />
+    <input type="password" [(ngModel)]="password" class="form-control" placeholder="пароль"/>
   </div>
   <div class="spacer">
     <button type="submit" (click)="Login()">Войти</button>

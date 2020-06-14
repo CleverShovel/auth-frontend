@@ -5,17 +5,19 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class RegService {
 
   uri = '/api';
   token;
 
   constructor(private http: HttpClient, private router: Router) { }
-  
-  login(email: string, password: string) {
-    this.http.post(this.uri + '/authenticate', { email: email, password: password })
+
+  register(name: string, email: string, phoneNumber: string, password: string) {
+    this.http.post(this.uri + '/register', {
+      name: name, email: email, phoneNumber: phoneNumber, password: password
+    })
       .subscribe((resp: any) => {
-        alert("Authentication is succesful!")
+        alert("Registration is succesful!")
         // this.router.navigate(['profile']);
         // localStorage.setItem('auth_token', resp.token);
 
